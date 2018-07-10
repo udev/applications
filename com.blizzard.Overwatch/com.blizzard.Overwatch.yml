@@ -132,6 +132,9 @@ modules:
           - wine64 reg add 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion' /v CurrentBuildNumber /d '10240' /f
           - wine64 reg add 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion' /v CurrentVersion /d '10.0' /f
           - wine64 reg add 'HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Windows' /v CSDVersion /t REG_DWORD /d 00000000 /f
+          - wine64 reg add 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers' /v "C:/Program Files\ \(x86\)\Battle.net/Battle.net\ Launcher.exe" /t REG_SZ /d "WIN10 RUNASADMIN" /f
+          - wine64 reg add 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers' /v "C:/Program Files\ \(x86\)/Overwatch/Overwatch.exe" /t REG_SZ /d "WIN10 RUNASADMIN" /f
+          - wine64 reg add 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers' /v "C:/Program Files\ \(x86\)/Overwatch/Overwatch\ Launcher.exe" /t REG_SZ /d "WIN10 RUNASADMIN" /f
           - 
           - echo "Enable DXVA2 for Overwatch"
           - wine64 reg add 'HKEY_CURRENT_USER\Software\Wine\AppDefaults\Overwatch.exe\DXVA2' /v backend /d va /f
